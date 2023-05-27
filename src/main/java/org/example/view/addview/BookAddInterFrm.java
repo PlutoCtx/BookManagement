@@ -21,18 +21,18 @@ import java.util.logging.Logger;
  * @version 2022/12/21 12:03
  */
 public class BookAddInterFrm extends JInternalFrame {
-    private JTextField bookNameTxt;
-    private JTextField authorTxt;
+    private final JTextField bookNameTxt;
+    private final JTextField authorTxt;
     private final ButtonGroup buttonGroup = new ButtonGroup();
-    private JTextField priceTxt;
-    private JComboBox bookTypeJcb;
-    private JTextArea bookDescTxt;
-    private JRadioButton manJrb;
-    private JRadioButton femaleJrb;
+    private final JTextField priceTxt;
+    private final JComboBox bookTypeJcb;
+    private final JTextArea bookDescTxt;
+    private final JRadioButton manJrb;
+    private final JRadioButton femaleJrb;
 
-    private DBUtil dbUtil = new DBUtil();
-    private BookTypeDao bookTypeDao = new BookTypeDao();
-    private BookDao bookDao = new BookDao();
+    private final DBUtil dbUtil = new DBUtil();
+    private final BookTypeDao bookTypeDao = new BookTypeDao();
+    private final BookDao bookDao = new BookDao();
 
 
     /**

@@ -53,7 +53,6 @@ public class Main extends JFrame {
     public Main(){
         //改变系统默认字体
         Font font = new Font("Dialog", Font.PLAIN, 12);
-        // java.util.Enumeration keys = UIManager.getDefaults().keys();
         Enumeration<Object> keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()){
             Object key = keys.nextElement();

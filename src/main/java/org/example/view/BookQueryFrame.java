@@ -29,23 +29,23 @@ import java.util.Vector;
 
 public class BookQueryFrame extends JInternalFrame {
 
-    private JTable bookTable;
-    private JTextField s_bookNameTxt;
-    private JTextField s_authorTxt;
-    private JComboBox s_bookTypeJcb;
-    private JRadioButton manJrb ;
-    private JRadioButton femaleJrb ;
-    private JTextArea bookDescTxt;
-    private JComboBox bookTypeJcb ;
+    private final JTable bookTable;
+    private final JTextField bookNameTxtField;
+    private final JTextField authorTxtField;
+    private final JComboBox s_bookTypeJcb;
+    private final JRadioButton manJrb ;
+    private final JRadioButton femaleJrb ;
+    private final JTextArea bookDescTxt;
+    private final JComboBox bookTypeJcb ;
 
-    private DBUtil dbUtil = new DBUtil();
-    private BookTypeDao bookTypeDao = new BookTypeDao();
-    private BookDao bookDao = new BookDao();
-    private JTextField idTxt;
-    private JTextField bookNameTxt;
+    private final DBUtil dbUtil = new DBUtil();
+    private final BookTypeDao bookTypeDao = new BookTypeDao();
+    private final BookDao bookDao = new BookDao();
+    private final JTextField idTxt;
+    private final JTextField bookNameTxt;
     private final ButtonGroup buttonGroup = new ButtonGroup();
-    private JTextField priceTxt;
-    private JTextField authorTxt;
+    private final JTextField priceTxt;
+    private final JTextField authorTxt;
 
     /**
      * Create the frame.
@@ -127,17 +127,17 @@ public class BookQueryFrame extends JInternalFrame {
         bookTypeJcb.setEditable(false);
 
         // 图书描述：
-        JLabel label_6 = new JLabel("图书描述：");
+        JLabel labelBookDesc = new JLabel("图书描述：");
         bookDescTxt = new JTextArea();
         bookDescTxt.setEditable(false);
 
         // 加入购物车
-        JButton button_1 = new JButton("加入购物车");
-        button_1.addActionListener(this::bookUpdateActionPerformed);
+        JButton buttonAdd = new JButton("加入购物车");
+        buttonAdd.addActionListener(this::bookUpdateActionPerformed);
 
         // 删除
-        JButton button_2 = new JButton("删除");
-        button_2.addActionListener(this::bookDeleteActionPerformed);
+        JButton buttonDelete = new JButton("删除");
+        buttonDelete.addActionListener(this::bookDeleteActionPerformed);
 
         GroupLayout gl_panel1 = new GroupLayout(panel1);
         gl_panel1.setHorizontalGroup(
@@ -146,14 +146,14 @@ public class BookQueryFrame extends JInternalFrame {
                     .addGap(19)
                     .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(gl_panel1.createSequentialGroup()
-                            .addComponent(button_1)
+                            .addComponent(buttonAdd)
                             .addGap(18)
-                            .addComponent(button_2)
+                            .addComponent(buttonDelete)
                             .addGap(386))
                         .addGroup(gl_panel1.createSequentialGroup()
                             .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
                                 .addGroup(gl_panel1.createSequentialGroup()
-                                    .addComponent(label_6)
+                                    .addComponent(labelBookDesc)
                                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(bookDescTxt))
                                 .addGroup(gl_panel1.createSequentialGroup()
@@ -212,29 +212,29 @@ public class BookQueryFrame extends JInternalFrame {
                         .addComponent(bookTypeJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18)
                     .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(label_6)
+                        .addComponent(labelBookDesc)
                         .addComponent(bookDescTxt, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                     .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(button_1)
-                        .addComponent(button_2)))
+                        .addComponent(buttonAdd)
+                        .addComponent(buttonDelete)))
         );
         panel1.setLayout(gl_panel1);
 
         // 图书名称：
         JLabel label = new JLabel("图书名称：");
 
-        s_bookNameTxt = new JTextField();
-        s_bookNameTxt.setColumns(10);
+        bookNameTxtField = new JTextField();
+        bookNameTxtField.setColumns(10);
 
         // 图书作者：
-        JLabel label_1 = new JLabel("图书作者：");
+        JLabel labelBookAuthor = new JLabel("图书作者：");
 
-        s_authorTxt = new JTextField();
-        s_authorTxt.setColumns(10);
+        authorTxtField = new JTextField();
+        authorTxtField.setColumns(10);
 
         // 图书类别：
-        JLabel label_2 = new JLabel("图书类别：");
+        JLabel labelBookType = new JLabel("图书类别：");
 
         s_bookTypeJcb = new JComboBox();
 
@@ -244,37 +244,37 @@ public class BookQueryFrame extends JInternalFrame {
 
         GroupLayout gl_panel = new GroupLayout(panel);
         gl_panel.setHorizontalGroup(
-                gl_panel.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(gl_panel.createSequentialGroup()
-                                .addGap(19)
-                                .addComponent(label)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s_bookNameTxt, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
-                                .addGap(18)
-                                .addComponent(label_1)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s_authorTxt, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(label_2)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s_bookTypeJcb, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
-                                .addGap(18)
-                                .addComponent(button)
-                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            gl_panel.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(gl_panel.createSequentialGroup()
+                    .addGap(19)
+                    .addComponent(label)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(bookNameTxtField, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18)
+                    .addComponent(labelBookAuthor)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(authorTxtField, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(labelBookType)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(s_bookTypeJcb, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18)
+                    .addComponent(button)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         gl_panel.setVerticalGroup(
-                gl_panel.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                        .addGroup(gl_panel.createSequentialGroup()
-                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(gl_panel.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                        .addComponent(label)
-                                        .addComponent(s_bookNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(label_1)
-                                        .addComponent(s_authorTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(label_2)
-                                        .addComponent(s_bookTypeJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(button))
-                                .addGap(16))
+            gl_panel.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                .addGroup(gl_panel.createSequentialGroup()
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(gl_panel.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(label)
+                        .addComponent(bookNameTxtField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelBookAuthor)
+                        .addComponent(authorTxtField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelBookType)
+                        .addComponent(s_bookTypeJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button))
+                    .addGap(16))
         );
         panel.setLayout(gl_panel);
 
@@ -295,12 +295,12 @@ public class BookQueryFrame extends JInternalFrame {
                         "作者性别", "图书价格", "图书描述", "图书类别"
                 }
         ) {
-            boolean[] columnEditables = new boolean[] {
+            final boolean[] columnEditable = new boolean[] {
                     false, false, false, false, false, false, false
             };
             @Override
             public boolean isCellEditable(int row, int column) {
-                return columnEditables[column];
+                return columnEditable[column];
             }
         });
         bookTable.getColumnModel().getColumn(5).setPreferredWidth(119);
@@ -317,7 +317,7 @@ public class BookQueryFrame extends JInternalFrame {
 
     /**
      * 图书删除事件处理
-     * @param evt
+     * @param evt event
      */
     private void bookDeleteActionPerformed(ActionEvent evt) {
         String id = idTxt.getText();
@@ -354,7 +354,7 @@ public class BookQueryFrame extends JInternalFrame {
 
     /**
      * 图书修改事件处理
-     * @param evt
+     * @param evt   event
      */
     private void bookUpdateActionPerformed(ActionEvent evt) {
         String id = this.idTxt.getText();
@@ -385,9 +385,9 @@ public class BookQueryFrame extends JInternalFrame {
 
         String sex="";
         if(manJrb.isSelected()){
-            sex="男";
+            sex = "男";
         }else if(femaleJrb.isSelected()){
-            sex="女";
+            sex = "女";
         }
 
         BookType bookType = (BookType) bookTypeJcb.getSelectedItem();
@@ -436,7 +436,7 @@ public class BookQueryFrame extends JInternalFrame {
 
     /**
      * 表格行点击事件处理
-     * @param met
+     * @param met   mouseEvent
      */
     private void bookTableMousePressed(MouseEvent met) {
         int row = this.bookTable.getSelectedRow();
@@ -466,8 +466,8 @@ public class BookQueryFrame extends JInternalFrame {
      * @param evt   event
      */
     private void bookSearchActionPerformed(ActionEvent evt) {
-        String bookName = this.s_bookNameTxt.getText();
-        String author = this.s_authorTxt.getText();
+        String bookName = this.bookNameTxtField.getText();
+        String author = this.authorTxtField.getText();
         BookType bookType = (BookType) this.s_bookTypeJcb.getSelectedItem();
         int bookTypeId = bookType.getId();
 

@@ -199,12 +199,12 @@ public class BookManageInterFrm extends JInternalFrame {
         s_bookNameTxt = new JTextField();
         s_bookNameTxt.setColumns(10);
 
-        JLabel label_1 = new JLabel("图书作者：");
+        JLabel labelAuthorName = new JLabel("图书作者：");
 
         s_authorTxt = new JTextField();
         s_authorTxt.setColumns(10);
 
-        JLabel label_2 = new JLabel("图书类别：");
+        JLabel labelBookType = new JLabel("图书类别：");
 
         s_bookTypeJcb = new JComboBox();
 
@@ -220,11 +220,11 @@ public class BookManageInterFrm extends JInternalFrame {
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(s_bookNameTxt, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
                     .addGap(18)
-                    .addComponent(label_1)
+                    .addComponent(labelAuthorName)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(s_authorTxt, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(label_2)
+                    .addComponent(labelBookType)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(s_bookTypeJcb, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
                     .addGap(18)
@@ -238,9 +238,9 @@ public class BookManageInterFrm extends JInternalFrame {
                     .addGroup(gl_panel.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label)
                         .addComponent(s_bookNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(label_1)
+                        .addComponent(labelAuthorName)
                         .addComponent(s_authorTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(label_2)
+                        .addComponent(labelBookType)
                         .addComponent(s_bookTypeJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(button))
                     .addGap(16))
@@ -262,12 +262,12 @@ public class BookManageInterFrm extends JInternalFrame {
                         "编号", "图书名称", "图书作者", "作者性别", "图书价格", "图书描述", "图书类别"
                 }
         ) {
-            boolean[] columnEditables = new boolean[] {
+            final boolean[] columnEditable = new boolean[] {
                     false, false, false, false, false, false, false
             };
             @Override
             public boolean isCellEditable(int row, int column) {
-                return columnEditables[column];
+                return columnEditable[column];
             }
         });
         bookTable.getColumnModel().getColumn(5).setPreferredWidth(119);
@@ -282,12 +282,9 @@ public class BookManageInterFrm extends JInternalFrame {
     }
 
 
-
-
-
     /**
      * 图书删除事件处理
-     * @param evt
+     * @param evt   event
      */
     private void bookDeleteActionPerformed(ActionEvent evt) {
         String id = idTxt.getText();
@@ -322,12 +319,9 @@ public class BookManageInterFrm extends JInternalFrame {
     }
 
 
-
-
-
     /**
      * 图书修改事件处理
-     * @param evt
+     * @param evt   event
      */
     private void bookUpdateActionPerformed(ActionEvent evt) {
         String id = this.idTxt.getText();
@@ -409,7 +403,7 @@ public class BookManageInterFrm extends JInternalFrame {
 
     /**
      * 表格行点击事件处理
-     * @param met
+     * @param met   mouseEvent
      */
     private void bookTableMousePressed(MouseEvent met) {
         int row = this.bookTable.getSelectedRow();
@@ -434,13 +428,9 @@ public class BookManageInterFrm extends JInternalFrame {
         }
     }
 
-
-
-
-
     /**
      * 图书查询事件处理
-     * @param evt
+     * @param evt event
      */
     private void bookSearchActionPerformed(ActionEvent evt) {
         String bookName = this.s_bookNameTxt.getText();
@@ -451,8 +441,6 @@ public class BookManageInterFrm extends JInternalFrame {
         Book book = new Book(bookName,author,bookTypeId);
         this.fillTable(book);
     }
-
-
 
 
     /**
@@ -492,13 +480,9 @@ public class BookManageInterFrm extends JInternalFrame {
         }
     }
 
-
-
-
-
     /**
      * 初始化表格数据
-     * @param book
+     * @param book  book
      */
     private void fillTable(Book book){
         DefaultTableModel dtm = (DefaultTableModel) bookTable.getModel();

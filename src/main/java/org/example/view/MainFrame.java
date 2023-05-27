@@ -95,16 +95,16 @@ public class MainFrame extends JFrame {
         mnNewMenu2.add(menuItem3);
 
         // 安全退出
-        JMenuItem menuItem_4 = new JMenuItem("安全退出");
-        menuItem_4.addActionListener(e -> {
+        JMenuItem menuItemExit = new JMenuItem("安全退出");
+        menuItemExit.addActionListener(e -> {
             int result=JOptionPane.showConfirmDialog(null, "是否退出系统");
             if(result==0){
                 dispose();
                 setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             }
         });
-        menuItem_4.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/exit.png"))));
-        mnNewMenu.add(menuItem_4);
+        menuItemExit.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/exit.png"))));
+        mnNewMenu.add(menuItemExit);
 
         // 关于我们
         JMenu menu = new JMenu("关于我们");

@@ -28,18 +28,18 @@ public class Java1234InterFrm extends JInternalFrame {
 
         GroupLayout groupLayout = new GroupLayout(getContentPane());
         groupLayout.setHorizontalGroup(
-                groupLayout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(groupLayout.createSequentialGroup()
-                                .addGap(98)
-                                .addComponent(lblNewLabel)
-                                .addContainerGap(126, Short.MAX_VALUE))
+            groupLayout.createParallelGroup(Alignment.LEADING)
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addGap(98)
+                    .addComponent(lblNewLabel)
+                    .addContainerGap(126, Short.MAX_VALUE))
         );
         groupLayout.setVerticalGroup(
-                groupLayout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(groupLayout.createSequentialGroup()
-                                .addGap(48)
-                                .addComponent(lblNewLabel)
-                                .addContainerGap(149, Short.MAX_VALUE))
+            groupLayout.createParallelGroup(Alignment.LEADING)
+                .addGroup(groupLayout.createSequentialGroup()
+                    .addGap(48)
+                    .addComponent(lblNewLabel)
+                    .addContainerGap(149, Short.MAX_VALUE))
         );
         getContentPane().setLayout(groupLayout);
     }

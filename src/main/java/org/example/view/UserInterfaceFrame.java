@@ -1,5 +1,7 @@
 package org.example.view;
 
+import org.example.view.addview.BookAddInterFrm;
+import org.example.view.manageview.BookManageInterFrm;
 import org.example.view.manageview.BookTypeManageInterFrm;
 
 import javax.swing.*;
@@ -68,31 +70,31 @@ public class UserInterfaceFrame extends JFrame {
         });
         menuItem1.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/edit.png"))));
         mnNewMenu1.add(menuItem1);
-//
-//        // 图书管理
-//        JMenu mnNewMenu2 = new JMenu("\u56FE\u4E66\u7BA1\u7406");
-//        mnNewMenu2.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/bookManager.png"))));
-//        mnNewMenu.add(mnNewMenu2);
-//
-//        // 图书添加
-//        JMenuItem menuItem2 = new JMenuItem("\u56FE\u4E66\u6DFB\u52A0");
-//        menuItem2.addActionListener(arg0 -> {
-//            BookAddInterFrm bookAddInterFrm=new BookAddInterFrm();
-//            bookAddInterFrm.setVisible(true);
-//            table.add(bookAddInterFrm);
-//        });
-//        menuItem2.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/add.png"))));
-//        mnNewMenu2.add(menuItem2);
-//
-//        // 图书维护
-//        JMenuItem menuItem3 = new JMenuItem("\u56FE\u4E66\u7EF4\u62A4");
-//        menuItem3.addActionListener(arg0 -> {
-//            BookManageInterFrm bookManageInterFrm=new BookManageInterFrm();
-//            bookManageInterFrm.setVisible(true);
-//            table.add(bookManageInterFrm);
-//        });
-//        menuItem3.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/edit.png"))));
-//        mnNewMenu2.add(menuItem3);
+
+        // 图书管理
+        JMenu mnNewMenu2 = new JMenu("\u56FE\u4E66\u7BA1\u7406");
+        mnNewMenu2.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/bookManager.png"))));
+        mnNewMenu.add(mnNewMenu2);
+
+        // 图书添加
+        JMenuItem menuItem2 = new JMenuItem("\u56FE\u4E66\u6DFB\u52A0");
+        menuItem2.addActionListener(arg0 -> {
+            BookAddInterFrm bookAddInterFrm=new BookAddInterFrm();
+            bookAddInterFrm.setVisible(true);
+            table.add(bookAddInterFrm);
+        });
+        menuItem2.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/add.png"))));
+        mnNewMenu2.add(menuItem2);
+
+        // 图书维护
+        JMenuItem menuItem3 = new JMenuItem("\u56FE\u4E66\u7EF4\u62A4");
+        menuItem3.addActionListener(arg0 -> {
+            BookManageInterFrm bookManageInterFrm=new BookManageInterFrm();
+            bookManageInterFrm.setVisible(true);
+            table.add(bookManageInterFrm);
+        });
+        menuItem3.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/edit.png"))));
+        mnNewMenu2.add(menuItem3);
 //
         // 安全退出
         JMenuItem menuItem4 = new JMenuItem("安全退出");
