@@ -3,7 +3,7 @@ package org.example.utils;
 /**
  * 字符串工具类
  *
- * @author Max chenmochen1954@163.com
+ * @author MaxBrooks 15905898514@163.com
  * since jdk17
  * @version 2022/12/20 22:41
  */

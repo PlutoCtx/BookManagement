@@ -1,7 +1,5 @@
 package org.example.dao;
 
-
-
 import org.example.model.User;
 
 import java.sql.Connection;
@@ -11,7 +9,7 @@ import java.sql.ResultSet;
 /**
  * 用户Dao层
  *
- * @author Max chenmochen1954@163.com
+ * @author MaxBrooks 15905898514@163.com
  * since jdk17
  * @version 2022/12/18 23:55
  */

@@ -1,7 +1,5 @@
 package org.example;
 
-
-
 import org.example.dao.UserDao;
 import org.example.model.User;
 import org.example.utils.DBUtil;
@@ -21,11 +19,11 @@ import java.util.Objects;
 /**
  * 登录界面
  *
- * @author Max chenmochen1954@163.com
+ * @author MaxBrooks 15905898514@163.com
  * since jdk17
  * @version 2022/12/20 18:06
  */
-public class LogOnFrame extends JFrame {
+public class Main extends JFrame {
 
     private JPanel contentPane;
     private final JTextField userNameText;
@@ -41,7 +39,7 @@ public class LogOnFrame extends JFrame {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
-                LogOnFrame frame = new LogOnFrame();
+                Main frame = new Main();
                 frame.setVisible(true);
             }catch (Exception e){
                 e.printStackTrace();
@@ -52,7 +50,7 @@ public class LogOnFrame extends JFrame {
     /**
      * Create the frame
      */
-    public LogOnFrame(){
+    public Main(){
         //改变系统默认字体
         Font font = new Font("Dialog", Font.PLAIN, 12);
         // java.util.Enumeration keys = UIManager.getDefaults().keys();

@@ -1,7 +1,5 @@
 package org.example.view;
 
-
-
 import org.example.dao.BookTypeDao;
 import org.example.model.BookType;
 import org.example.utils.DBUtil;
@@ -18,7 +16,7 @@ import java.util.Objects;
 /**
  * 添加图书
  *
- * @author Max chenmochen1954@163.com
+ * @author MaxBrooks 15905898514@163.com
  * since jdk17
  * @version 2022/12/21 10:54
  */

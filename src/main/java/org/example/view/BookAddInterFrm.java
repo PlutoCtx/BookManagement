@@ -1,7 +1,5 @@
 package org.example.view;
 
-
-
 import org.example.dao.BookDao;
 import org.example.dao.BookTypeDao;
 import org.example.model.Book;
@@ -18,7 +16,7 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 /**
- * @author Max chenmochen1954@163.com
+ * @author MaxBrooks 15905898514@163.com
  * since jdk17
  * @version 2022/12/21 12:03
  */
