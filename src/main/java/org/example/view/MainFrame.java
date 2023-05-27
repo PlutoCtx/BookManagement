@@ -1,5 +1,10 @@
 package org.example.view;
 
+import org.example.view.addview.BookAddInterFrm;
+import org.example.view.addview.BookTypeAddInterFrm;
+import org.example.view.manageview.BookManageInterFrm;
+import org.example.view.manageview.BookTypeManageInterFrm;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;

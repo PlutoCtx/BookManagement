@@ -1,5 +1,7 @@
 package org.example.view;
 
+import org.example.view.manageview.BookTypeManageInterFrm;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -25,11 +27,11 @@ public class UserInterfaceFrame extends JFrame {
     public UserInterfaceFrame() {
 
         // 图书管理系统用户界面
-        setTitle("\u56fe\u4e66\u7ba1\u7406\u7cfb\u7edf\u7528\u6237\u754c\u9762");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("图书管理系统用户界面");
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 300);
 
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setExtendedState(Frame.MAXIMIZED_BOTH);
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
@@ -93,7 +95,7 @@ public class UserInterfaceFrame extends JFrame {
 //        mnNewMenu2.add(menuItem3);
 //
         // 安全退出
-        JMenuItem menuItem4 = new JMenuItem("\u5B89\u5168\u9000\u51FA");
+        JMenuItem menuItem4 = new JMenuItem("安全退出");
         menuItem4.addActionListener(e -> {
             int result=JOptionPane.showConfirmDialog(null, "是否退出系统");
             if(result==0){
@@ -104,13 +106,13 @@ public class UserInterfaceFrame extends JFrame {
         menuItem4.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/exit.png"))));
         mnNewMenu.add(menuItem4);
 
-        // 关于我们
-        JMenu menu = new JMenu("\u5173\u4E8E");
+        // 关于
+        JMenu menu = new JMenu("关于");
         menu.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/about.png"))));
         menuBar.add(menu);
 
         // 关于我们
-        JMenuItem jMenuItem = new JMenuItem("\u5173\u4e8e\u6211\u4eec");
+        JMenuItem jMenuItem = new JMenuItem("关于我们");
         jMenuItem.addActionListener(arg0 -> {
             Java1234InterFrm java1234InterFrm = new Java1234InterFrm();
             java1234InterFrm.setVisible(true);
@@ -128,7 +130,7 @@ public class UserInterfaceFrame extends JFrame {
         contentPane.add(table, BorderLayout.CENTER);
 
         // 设置JFrame最大化
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setExtendedState(Frame.MAXIMIZED_BOTH);
     }
 
 

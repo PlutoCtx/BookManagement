@@ -1,4 +1,4 @@
-package org.example.view;
+package org.example.view.addview;
 
 import org.example.dao.BookDao;
 import org.example.dao.BookTypeDao;

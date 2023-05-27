@@ -1,4 +1,4 @@
-package org.example.view;
+package org.example.view.manageview;
 
 import org.example.dao.BookDao;
 import org.example.dao.BookTypeDao;
@@ -83,34 +83,34 @@ public class BookManageInterFrm extends JInternalFrame {
         idTxt.setEditable(false);
         idTxt.setColumns(10);
 
-        JLabel lblNewLabel_1 = new JLabel("图书名称：");
+        JLabel labelBookName = new JLabel("图书名称：");
         bookNameTxt = new JTextField();
         bookNameTxt.setColumns(10);
         
-        JLabel label_3 = new JLabel("作者性别：");
+        JLabel labelAuthorSex = new JLabel("作者性别：");
         manJrb = new JRadioButton("男");
         buttonGroup.add(manJrb);
         manJrb.setSelected(true);
         femaleJrb = new JRadioButton("女");
         buttonGroup.add(femaleJrb);
 
-        JLabel label_4 = new JLabel("价格：");
+        JLabel labelBookPrice = new JLabel("价格：");
         priceTxt = new JTextField();
         priceTxt.setColumns(10);
-        JLabel lblNewLabel_2 = new JLabel("图书作者：");
+        JLabel labelBookAuthor = new JLabel("图书作者：");
         authorTxt = new JTextField();
         authorTxt.setColumns(10);
 
         JLabel label5 = new JLabel("图书类别：");
         bookTypeJcb = new JComboBox();
-        JLabel label_6 = new JLabel("图书描述：");
+        JLabel labelBookDesc = new JLabel("图书描述：");
         bookDescTxt = new JTextArea();
 
-        JButton button_1 = new JButton("修改");
-        button_1.addActionListener(this::bookUpdateActionPerformed);
+        JButton buttonRevise = new JButton("修改");
+        buttonRevise.addActionListener(this::bookUpdateActionPerformed);
 
-        JButton button_2 = new JButton("删除");
-        button_2.addActionListener(this::bookDeleteActionPerformed);
+        JButton buttonDelete = new JButton("删除");
+        buttonDelete.addActionListener(this::bookDeleteActionPerformed);
 
         GroupLayout gl_panel_1 = new GroupLayout(panel_1);
         gl_panel_1.setHorizontalGroup(
@@ -119,20 +119,20 @@ public class BookManageInterFrm extends JInternalFrame {
                     .addGap(19)
                     .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(gl_panel_1.createSequentialGroup()
-                            .addComponent(button_1)
+                            .addComponent(buttonRevise)
                             .addGap(18)
-                            .addComponent(button_2)
+                            .addComponent(buttonDelete)
                             .addGap(386))
                         .addGroup(gl_panel_1.createSequentialGroup()
                             .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
                                 .addGroup(gl_panel_1.createSequentialGroup()
-                                    .addComponent(label_6)
+                                    .addComponent(labelBookDesc)
                                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(bookDescTxt))
                                     .addGroup(gl_panel_1.createSequentialGroup()
                                         .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                             .addGroup(gl_panel_1.createSequentialGroup()
-                                                .addComponent(label_4)
+                                                .addComponent(labelBookPrice)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(priceTxt))
                                             .addGroup(gl_panel_1.createSequentialGroup()
@@ -142,17 +142,17 @@ public class BookManageInterFrm extends JInternalFrame {
                                         .addGap(26)
                                         .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                             .addGroup(gl_panel_1.createSequentialGroup()
-                                                .addComponent(lblNewLabel_1)
+                                                .addComponent(labelBookName)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(bookNameTxt, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE))
                                             .addGroup(gl_panel_1.createSequentialGroup()
-                                                .addComponent(lblNewLabel_2)
+                                                .addComponent(labelBookAuthor)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(authorTxt)))
                                         .addGap(26)
                                         .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                             .addGroup(gl_panel_1.createSequentialGroup()
-                                                .addComponent(label_3)
+                                                .addComponent(labelAuthorSex)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(manJrb)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -170,27 +170,27 @@ public class BookManageInterFrm extends JInternalFrame {
                     .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(lblNewLabel)
                         .addComponent(idTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblNewLabel_1)
+                        .addComponent(labelBookName)
                         .addComponent(bookNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(label_3)
+                        .addComponent(labelAuthorSex)
                         .addComponent(manJrb)
                         .addComponent(femaleJrb))
                     .addGap(18)
                     .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(label_4)
+                        .addComponent(labelBookPrice)
                         .addComponent(priceTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblNewLabel_2)
+                        .addComponent(labelBookAuthor)
                         .addComponent(authorTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(label5)
                         .addComponent(bookTypeJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18)
                     .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(label_6)
+                        .addComponent(labelBookDesc)
                         .addComponent(bookDescTxt, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                     .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(button_1)
-                        .addComponent(button_2)))
+                        .addComponent(buttonRevise)
+                        .addComponent(buttonDelete)))
         );
         panel_1.setLayout(gl_panel_1);
 

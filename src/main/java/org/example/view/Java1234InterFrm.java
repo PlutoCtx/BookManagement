@@ -21,7 +21,7 @@ public class Java1234InterFrm extends JInternalFrame {
         getContentPane().setBackground(Color.RED);
         setIconifiable(true);
         setClosable(true);
-        setTitle("关于Java1234");
+        setTitle("关于Java");
         setBounds(100, 100, 450, 300);
 
         JLabel lblNewLabel = new JLabel("");
