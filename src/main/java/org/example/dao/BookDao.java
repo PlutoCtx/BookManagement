@@ -44,13 +44,13 @@ public class BookDao {
     public ResultSet list(Connection connection, Book book)throws Exception{
         StringBuffer stringBuffer = new StringBuffer("SELECT * FROM t_book b,t_bookType bt WHERE b.bookTypeId = bt.id");
         if(StringUtil.isNotEmpty(book.getBookName())){
-            stringBuffer.append(" and b.bookName like '%"+book.getBookName()+"%'");
+            stringBuffer.append(" and b.bookName like '%").append(book.getBookName()).append("%'");
         }
         if(StringUtil.isNotEmpty(book.getAuthor())){
-            stringBuffer.append(" and b.author like '%"+book.getAuthor()+"%'");
+            stringBuffer.append(" and b.author like '%").append(book.getAuthor()).append("%'");
         }
         if(book.getBookTypeId() != null && book.getBookTypeId()!=-1){
-            stringBuffer.append(" and b.bookTypeId="+book.getBookTypeId());
+            stringBuffer.append(" and b.bookTypeId=").append(book.getBookTypeId());
         }
         PreparedStatement preparedStatement = connection.prepareStatement(stringBuffer.toString());
         return preparedStatement.executeQuery();

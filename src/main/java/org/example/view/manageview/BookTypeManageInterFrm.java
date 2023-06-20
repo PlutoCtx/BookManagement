@@ -26,7 +26,6 @@ import java.util.Vector;
 public class BookTypeManageInterFrm extends JInternalFrame {
     private final JTable bookTypeTable;
     private final JTextArea bookTypeDescTxt ;
-
     private final DBUtil dbUtil = new DBUtil();
     private final BookTypeDao bookTypeDao = new BookTypeDao();
     private final BookDao bookDao = new BookDao();
@@ -188,9 +187,6 @@ public class BookTypeManageInterFrm extends JInternalFrame {
     }
 
 
-
-
-
     /**
      * 图书类别删除事件处理
      * @param event event
@@ -273,7 +269,6 @@ public class BookTypeManageInterFrm extends JInternalFrame {
     }
 
 
-
     /**
      * 表格行点击事件处理
      * @param event event
@@ -286,7 +281,6 @@ public class BookTypeManageInterFrm extends JInternalFrame {
     }
 
 
-
     /**
      * 图书类别搜索事件处理
      * @param event event
@@ -297,6 +291,7 @@ public class BookTypeManageInterFrm extends JInternalFrame {
         bookType.setBookTypeName(bookTypeName);
         this.fillTable(bookType);
     }
+
 
     /**
      * 初始化表格
@@ -326,6 +321,7 @@ public class BookTypeManageInterFrm extends JInternalFrame {
             }
         }
     }
+
 
     /**
      * 重置表单
