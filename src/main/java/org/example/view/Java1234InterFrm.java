@@ -1,8 +1,11 @@
 package org.example.view;
 
+import org.example.view.addview.BookAddInterFrm;
+
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import java.awt.*;
+import java.util.Objects;
 
 /**
  * 内部窗体
@@ -18,12 +21,10 @@ public class Java1234InterFrm extends JInternalFrame {
      * 内部窗体
      */
     public Java1234InterFrm() {
-        getContentPane().setBackground(Color.RED);
         setIconifiable(true);
         setClosable(true);
         setTitle("关于Java");
         setBounds(100, 100, 450, 300);
-
         JLabel lblNewLabel = new JLabel("");
 
         GroupLayout groupLayout = new GroupLayout(getContentPane());

@@ -8,10 +8,6 @@
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 b
 2src/main/java/org/example/view/BookQueryFrame.java,6\6\66e129f514fb6581d639b79403b8a6bb461f8f7f
-d
-4src/main/java/org/example/view/Java1234InterFrm.java,8\7\87a067c3150ceed98037dd0eec578108f12075df
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 Z
 *src/main/java/org/example/dao/UserDao.java,3\0\30d9b545975062fcf001a1e8ea4e2e70d13a7d3b
 o
@@ -24,3 +20,9 @@ Y
 )src/main/java/org/example/view/Login.java,6\d\6db33f7c093b2ae4103536fdc23b7c57b9ba33e4
 u
 Esrc/main/java/org/example/view/manageview/BookTypeManageInterFrm.java,8\3\83d0f96a362d970dbf10c877e6828d43f6ec4ee8
+>
+sql/t_book.sql,2\c\2c40cad95bd786a84056600f19ebf64ef8914aa5
+>
+sql/t_user.sql,3\7\3737727be886c68b0a2eee87d3673d65bf77b3d0
+B
+sql/t_booktype.sql,b\b\bbeac87fa1032b4a489cf809ed2c5a721b903960
