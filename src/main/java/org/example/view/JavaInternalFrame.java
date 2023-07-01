@@ -1,10 +1,6 @@
 package org.example.view;
 
-import org.example.view.addview.BookAddInterFrm;
-
 import javax.swing.*;
-import javax.swing.GroupLayout.Alignment;
-import java.util.Objects;
 
 /**
  * 内部窗体
