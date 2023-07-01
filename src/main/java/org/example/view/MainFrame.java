@@ -120,7 +120,7 @@ public class MainFrame extends JFrame {
         // 2.1关于Java
         JMenuItem jMenuItem = new JMenuItem("关于Java");
         jMenuItem.addActionListener(arg0 -> {
-            Java1234InterFrm java1234InterFrm=new Java1234InterFrm();
+            JavaInternalFrame java1234InterFrm=new JavaInternalFrame();
             java1234InterFrm.setVisible(true);
             table.add(java1234InterFrm);
         });
