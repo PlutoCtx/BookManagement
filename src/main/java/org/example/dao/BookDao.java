@@ -42,7 +42,7 @@ public class BookDao {
      * @throws Exception    how do I know
      */
     public ResultSet list(Connection connection, Book book)throws Exception{
-        StringBuffer stringBuffer = new StringBuffer("SELECT * FROM t_book b,t_bookType bt WHERE b.bookTypeId = bt.id");
+        StringBuilder stringBuffer = new StringBuilder("SELECT * FROM t_book b,t_bookType bt WHERE b.bookTypeId = bt.id");
         if(StringUtil.isNotEmpty(book.getBookName())){
             stringBuffer.append(" and b.bookName like '%").append(book.getBookName()).append("%'");
         }
@@ -64,7 +64,7 @@ public class BookDao {
      * @throws Exception    how do I know
      */
     public int delete(Connection connection,String id)throws Exception{
-        String sql="DELETE FROM t_book WHERE id = ?";
+        String sql = "DELETE FROM t_book WHERE id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, id);
         return preparedStatement.executeUpdate();
@@ -78,7 +78,7 @@ public class BookDao {
      * @throws Exception    how do I know
      */
     public int update(Connection connection,Book book) throws Exception{
-        String sql="UPDATE t_book SET bookName = ?, author = ?, sex = ?, price = ?, bookDesc = ?, bookTypeId = ? WHERE id = ?";
+        String sql = "UPDATE t_book SET bookName = ?, author = ?, sex = ?, price = ?, bookDesc = ?, bookTypeId = ? WHERE id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, book.getBookName());
         preparedStatement.setString(2, book.getAuthor());
@@ -99,7 +99,7 @@ public class BookDao {
      * @throws Exception    异常多了什么都有可能
      */
     public boolean existBookByBookTypeId(Connection connection,String bookTypeId)throws Exception{
-        String sql="SELECT * FROM t_book WHERE bookTypeId = ?";
+        String sql = "SELECT * FROM t_book WHERE bookTypeId = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, bookTypeId);
         ResultSet rs = preparedStatement.executeQuery();

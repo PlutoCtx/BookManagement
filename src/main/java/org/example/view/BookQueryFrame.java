@@ -242,10 +242,10 @@ public class BookQueryFrame extends JInternalFrame {
         JButton button = new JButton("查询");
         button.addActionListener(this::bookSearchActionPerformed);
 
-        GroupLayout gl_panel = new GroupLayout(panel);
-        gl_panel.setHorizontalGroup(
-            gl_panel.createParallelGroup(GroupLayout.Alignment.LEADING)
-                .addGroup(gl_panel.createSequentialGroup()
+        GroupLayout glPanel = new GroupLayout(panel);
+        glPanel.setHorizontalGroup(
+            glPanel.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(glPanel.createSequentialGroup()
                     .addGap(19)
                     .addComponent(label)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -262,11 +262,11 @@ public class BookQueryFrame extends JInternalFrame {
                     .addComponent(button)
                     .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        gl_panel.setVerticalGroup(
-            gl_panel.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                .addGroup(gl_panel.createSequentialGroup()
+        glPanel.setVerticalGroup(
+            glPanel.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                .addGroup(glPanel.createSequentialGroup()
                     .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(gl_panel.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addGroup(glPanel.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label)
                         .addComponent(bookNameTxtField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(labelBookAuthor)
@@ -276,7 +276,7 @@ public class BookQueryFrame extends JInternalFrame {
                         .addComponent(button))
                     .addGap(16))
         );
-        panel.setLayout(gl_panel);
+        panel.setLayout(glPanel);
 
         bookTable = new JTable();
         bookTable.addMouseListener(new MouseAdapter() {

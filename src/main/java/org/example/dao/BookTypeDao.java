@@ -37,7 +37,7 @@ public class BookTypeDao {
      * @throws Exception    无结果
      */
     public ResultSet list(Connection connection, BookType bookType)throws Exception{
-        StringBuffer stringBuffer = new StringBuffer("SELECT * FROM t_bookType");
+        StringBuilder stringBuffer = new StringBuilder("SELECT * FROM t_bookType");
         if(StringUtil.isNotEmpty(bookType.getBookTypeName())){
             stringBuffer.append(" and bookTypeName like '%").append(bookType.getBookTypeName()).append("%'");
         }

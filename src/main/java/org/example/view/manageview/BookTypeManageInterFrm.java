@@ -295,7 +295,7 @@ public class BookTypeManageInterFrm extends JInternalFrame {
 
     /**
      * 初始化表格
-     * @param bookType
+     * @param bookType  图书类型
      */
     private void fillTable(BookType bookType){
         DefaultTableModel dtm = (DefaultTableModel) bookTypeTable.getModel();
