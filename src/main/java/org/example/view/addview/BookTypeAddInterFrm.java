@@ -16,7 +16,7 @@ import java.util.Objects;
 /**
  * 添加图书
  *
- * @author MaxBrooks 15905898514@163.com
+ * @author MaxBrooks ctx195467@163.com
  * since jdk17
  * @version 2022/12/21 10:54
  */

@@ -22,7 +22,7 @@ import java.util.Vector;
 /**
  * 图书查询购买界面
  *
- * @author MaxBrooks 15905898514@163.com
+ * @author MaxBrooks ctx195467@163.com
  * @version 2023/3/7 18:25
  * @since JDK17
  */

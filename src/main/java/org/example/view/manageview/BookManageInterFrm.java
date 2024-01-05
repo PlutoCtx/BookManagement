@@ -19,7 +19,7 @@ import java.sql.ResultSet;
 import java.util.Vector;
 
 /**
- * @author MaxBrooks 15905898514@163.com
+ * @author MaxBrooks ctx195467@163.com
  * since jdk17
  * @version 2022/12/21 12:04
  */
@@ -86,7 +86,7 @@ public class BookManageInterFrm extends JInternalFrame {
         JLabel labelBookName = new JLabel("图书名称：");
         bookNameTxt = new JTextField();
         bookNameTxt.setColumns(10);
-        
+
         JLabel labelAuthorSex = new JLabel("作者性别：");
         manJrb = new JRadioButton("男");
         buttonGroup.add(manJrb);
